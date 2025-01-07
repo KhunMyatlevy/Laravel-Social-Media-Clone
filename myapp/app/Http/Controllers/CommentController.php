@@ -110,3 +110,4 @@ class CommentController extends Controller
     }
 }
 
+//this is a laravel controller that handles the CRUD operations for comments.
