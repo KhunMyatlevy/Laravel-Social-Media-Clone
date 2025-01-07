@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Post Details</h1>
+        <div id="post">
+            <h2 id="postTitle"></h2>
+            <p id="postBody"></p>
+        </div>
+
+        <!-- Buttons for edit and delete functionality -->
+        <button id="editButton">Edit</button>
+        <button id="deleteButton">Delete</button>
+
+        <!-- Button to add a comment -->
+        <button id="commentButton">Comment Something</button>
+
+        <!-- Div to display comments -->
+        <div id="commentsSection">
+            <h3>Comments</h3>
+            <div id="commentsList"></div> <!-- This will contain all the comment divs -->
+        </div>
+    </div>
+
+    <!-- Link to post.js file -->
+    <script src="post.js"></script>
+    <script>
+        console.log('LocalStorage items:', localStorage);
+    </script>
+</body>
+</html>

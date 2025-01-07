@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<body>
+    <div id="content">
+        <h1>All Posts</h1>
+        <div id="posts"></div> <!-- Container for posts -->
+        
+        <!-- Create Post button -->
+        <button id="createPostButton">Create a New Post</button>
+        
+        <!-- Logout button -->
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <script src="index.js"></script>
+
+    <script>
+        // Log all items in localStorage when the page loads
+        console.log('LocalStorage items:', localStorage);
+        // Optionally log specific item, like the access token
+        console.log('Access Token in LocalStorage:', localStorage.getItem('accessToken'));
+
+        // Check if the user is logged in
+        if (!localStorage.getItem('accessToken')) {
+            // Redirect to login page if there's no access token
+            window.location.href = 'login/login.html';
+        }
+
+        // Redirect to create_post.html when the "Create Post" button is clicked
+        document.getElementById('createPostButton').addEventListener('click', function() {
+        window.location.href = '../create_post/create_post.html'; // Move up one level and go to create_post
+
+        });
+    </script>
+</body>
+</html>
+
